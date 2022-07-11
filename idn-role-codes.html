@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IDN Role Code</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://linked.data.gov.au/def/idn-role-codes",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "The Indigenous Data Network's vocabulary of the types of roles Agents - People and Organisations - play in relation to data."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "IDN Role Codes"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.3</span>
+  </div>
+  <h1>IDN Role Codes</h1>
+<h3><em>A taxonomy</em></h3>
+  <section id="conceptscheme">
+      <h2 style="display:none;">Concept Scheme</h2>
+      <dl>
+          <dt>URI</dt>
+          <dd><code>https://linked.data.gov.au/def/idn-role-codes</code></dd>
+          <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+          <dd>
+              
+    <a href="https://linked.data.gov.au/org/idn">Indigenous Data Network</a><br/>
+          </dd>
+            <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+          <dd>
+              
+    <a href="https://linked.data.gov.au/org/idn">Indigenous Data Network</a><br/>
+          </dd>
+          <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
+          <dd>2022-06-11</dd>
+          <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+          <dd>2022-06-11</dd>
+          <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued">Issued</a></dt>
+          <dd>2000-01-01</dd>
+          <dt>Ontology RDF</dt>
+          <dd><a href="data_file.ttl">RDF (turtle)</a></dd>
+      </dl>
+      <h2>Description</h2>
+      <div id="description">
+          <p>The Indigenous Data Network's vocabulary of the types of roles Agents - People and Organisations - play in relation to data.</p>
+      </div>
+  </section>
+  <section id="toc">
+      <h2>Table of Contents</h2>
+      <ol>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#concepts">Concepts</a></li>
+          <li><a href="#namespaces">Namespaces</a></li>
+          <li><a href="#legend">Legend</a></li>
+      </ol>
+  </section>
+  <section id="collections">
+    <h2>Collections <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#ISOCIRoleCodecodes">ISO CI Role Code codes</a></li>
+    </ul>
+    <div class="entity collection" id="ISOCIRoleCodecodes">
+        <h3>ISO CI Role Code codes<sup title="Collection" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/idn-role-codes/iso-roles</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>Codes from the original ISO CI Role Code codelist</td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="#author">author</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#coAuthor">co author</a><sup class="sup-cp" title="concept">cp</sup>,                     
+                    <a href="#collaborator">collaborator</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#contributor">contributor</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#custodian">custodian</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#distributor">distributor</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#editor">editor</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#funder">funder</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#mediator">mediator</a><sup class="sup-cp" title="concept">cp</sup>
+                    <a href="#originator">originator</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#owner">owner</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#pointOfContact">point of contact</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#principalInvestigator">principal investigator</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#processor">processor</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#publisher">publisher</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#resourceProvider">resource provider</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#rightsHolder">rights holder</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#sponsor">sponsor</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#stakeholder">stakeholder</a><sup class="sup-cp" title="concept">cp</sup>, 
+                    <a href="#user">user</a><sup class="sup-cp" title="concept">cp</sup>, 
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+</section>
+  <section id="concepts">
+    <h2>Concepts <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hierarchy">
+        <li><a href="#author">author</a></li>
+        <li><a href="#coAuthor">co author</a></li>
+        <li><a href="#collaborator">collaborator</a></li>
+        <li><a href="#contributor">contributor</a></li>
+        <li><a href="#custodian">custodian</a></li>
+        <li><a href="#distributor">distributor</a></li>
+        <li><a href="#editor">editor</a></li>
+        <li><a href="#funder">funder</a></li>
+        <li><a href="#mediator">mediator</a></li>
+        <li><a href="#originator">originator</a></li>
+        <li><a href="#owner">owner</a></li>
+        <li><a href="#pointOfContact">point of contact</a></li>
+        <li><a href="#principalInvestigator">principal investigator</a></li>
+        <li><a href="#processor">processor</a></li>
+        <li><a href="#publisher">publisher</a></li>
+        <li><a href="#resourceProvider">resource provider</a></li>
+        <li><a href="#rightsHolder">rights holder</a></li>
+        <li><a href="#sponsor">sponsor</a></li>
+        <li>
+            <a href="#stakeholder">stakeholder</a>
+            <ul>
+                <li><a href="#subjectAgentRepresentatitve">subject agent representatitve</a></li>
+            </ul>
+        </li>
+        <li><a href="#subjectAgent">subject agent</a></li>
+        <li><a href="#user">user</a></li>
+    </ul>
+    <div class="entity concept" id="author">
+        <h3>author<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/author</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who authored the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="coAuthor">
+        <h3>co author<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/coAuthor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who jointly authors the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="collaborator">
+        <h3>collaborator<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/collaborator</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who assists with the generation of the resource other than the principal investigator<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="contributor">
+        <h3>contributor<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party contributing to the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="custodian">
+        <h3>custodian<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="distributor">
+        <h3>distributor<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/distributor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who distributes the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="editor">
+        <h3>editor<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/editor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who reviewed or modified the resource to improve the content<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="funder">
+        <h3>funder<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/funder</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party providing monetary support for the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="mediator">
+        <h3>mediator<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/mediator</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    a class of entity that mediates access to the resource and for whom the resource is intended or useful<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="originator">
+        <h3>originator<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who created the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="owner">
+        <h3>owner<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/owner</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party that owns the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="pointOfContact">
+        <h3>point of contact<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who can be contacted for acquiring knowledge about or acquisition of the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="principalInvestigator">
+        <h3>principal investigator<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/principalInvestigator</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    key party responsible for gathering information and conducting research<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="processor">
+        <h3>processor<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/processor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who has processed the data in a manner such that the resource has been modified<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="publisher">
+        <h3>publisher<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/publisher</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who published the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="resourceProvider">
+        <h3>resource provider<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/resourceProvider</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party that supplies the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="rightsHolder">
+        <h3>rights holder<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/rightsHolder</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party owning or managing rights over the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="sponsor">
+        <h3>sponsor<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/sponsor</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who speaks for the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="stakeholder">
+        <h3>stakeholder<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/stakeholder</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who has an interest in the resource or the use of the resource<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Narrower Concepts</th>
+                <td>
+                    <a href="#subjectAgentRepresentatitve">subject agent representatitve</a><sup class="sup-cp" title="concept">cp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="user">
+        <h3>user<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/user</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who uses the resource<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="subjectAgent">
+        <h3>subject agent<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/idn-role-codes/subjectAgent</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party that the resources contains information about<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity concept" id="subjectAgentRepresentatitve">
+        <h3>subject agent representatitve<sup title="Concept" class="sup-cp">cp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/idn-role-codes/subjectAgentRepresentatitve</code></td>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>
+                    party who can be contacted who best represents the interests of the subject agent<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Broader Concepts</th>
+                <td>
+                    <a href="http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/stakeholder">stakeholder</a><sup class="sup-cp" title="concept">cp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://linked.data.gov.au/def/idn-role-codes/</code></dd>
+        <dt>cs</dt>
+        <dd><code>https://linked.data.gov.au/def/idn-role-codes</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>iso</dt>
+        <dd><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/</code></dd>
+        <dt>isocs</dt>
+        <dd><code>http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>reg</dt>
+        <dd><code>http://purl.org/linked-data/registry#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>status</dt>
+        <dd><code>http://def.isotc211.org/iso19135/-1/2015/CoreModel/code/RE_ItemStatus/</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+
+  <section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+      <tr><td><sup class="sup-cl" title="Collections">cl</sup></td><td>Collections</td></tr>
+      <tr><td><sup class="sup-cp" title="Concepts">cp</sup></td><td>Concepts</td></tr>
+    </table>
+  </section>
+</body>
+</html>
