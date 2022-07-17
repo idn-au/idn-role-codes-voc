@@ -4,7 +4,9 @@ This repository contains the Role Codes, that is the types of roles Agents - Peo
 
 These Role Codes are presented in a Semantic Web vocabulary that is an extension to the ISO' Geospatial Metadata standard's http://iso.kurrawong.net/vocab/CI_RoleCode[CI Role Codes] vocabulary (also known as a codelist) that is also available online in Semantic Web form.
 
-This vocabulary is 
+This vocabulary is available online at a persistent web location:
+
+https://linked.data.gov.au/def/idn-role-codes
 
 
 == License & Rights
